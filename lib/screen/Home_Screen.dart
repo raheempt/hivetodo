@@ -18,6 +18,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Todo_App'),
+      ),
       body: Center(
         child: ValueListenableBuilder(
           valueListenable:todoBox.listenable() ,
