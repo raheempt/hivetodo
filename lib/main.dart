@@ -9,10 +9,10 @@ import 'package:path_provider/path_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Directory directory = await getApplicationDocumentsDirectory(); 
+    Directory directory = await getApplicationDocumentsDirectory(); 
   Hive.init(directory.path);
   Hive.registerAdapter<TodoMOdle>(TodoMOdleAdapter()); 
-  await Hive.openBox<TodoMOdle>('todoBox');
+ await Hive.openBox<TodoMOdle>('todoBox');
   runApp(MyApp());
 }
 
